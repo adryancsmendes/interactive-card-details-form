@@ -1,4 +1,4 @@
-# Frontend Mentor - FAQ accordion card
+# Frontend Mentor - Interactive card details form
 
 Essa é uma solução para [Interactive card details form](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). 
 
@@ -28,7 +28,7 @@ O desafio aqui foi construir esse Interactive card details form e deixá-lo o ma
 
 ### Links
 
-- Live Site URL: [FAQ accordion card](https://faq-accordion-card-sigma-coral.vercel.app/)
+- Live Site URL: [Interactive card details form](https://interactive-card-details-form-jet-three.vercel.app/)
 
 
 ## Meu processo

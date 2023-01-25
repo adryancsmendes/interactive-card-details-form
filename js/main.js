@@ -16,13 +16,12 @@ if(infosAtuais.length != 0){
 /*esta funcao adiciona um modelo no campo card number do formulario*/
 $(document).ready(function(){
     $('#card-number').mask('0000 0000 0000 0000');
-    console.log('oi')
 });
 
 /*esta funcao adiciona zeros ao código cvc se o numero digitado nao completar 3 dígitos*/
 function leadingZerosCvc(input) {
     if(!isNaN(input.value) && input.value.length >= 1 && input.value.length < 3) {
-      input.value = '0' + input.value;
+      input.value = '0' + input.value
     }
   }
 
@@ -32,6 +31,7 @@ function leadingZerosCvc(input) {
       input.value = '0' + input.value;
     }
   }
+
 
 form.addEventListener("submit", (event) =>{
     event.preventDefault();

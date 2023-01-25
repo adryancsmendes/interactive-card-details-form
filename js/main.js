@@ -20,8 +20,15 @@ $(document).ready(function(){
 });
 
 /*esta funcao adiciona zeros ao código cvc se o numero digitado nao completar 3 dígitos*/
-function leadingZeros(input) {
+function leadingZerosCvc(input) {
     if(!isNaN(input.value) && input.value.length >= 1 && input.value.length < 3) {
+      input.value = '0' + input.value;
+    }
+  }
+
+/*esta funcao adiciona zeros a data se o numero digitado nao completar 2 dígitos*/
+  function leadingZerosDate(input) {
+    if(!isNaN(input.value) && input.value.length >= 1 && input.value.length < 2) {
       input.value = '0' + input.value;
     }
   }

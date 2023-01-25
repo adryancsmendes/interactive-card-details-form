@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+  <!-- Script JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <!-- Estilos da Aplicação -->
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+  <main class="container">
+
+    <div class="conteudo">
+
+      <div class="conteudo-resultado">
+        <div class="conteudo-resultado-cartao">
+          <div class="cartao-frente">
+            <div class="cartao-frente-icons"><img src="/images/card-logo.svg" alt="icone cartao"></div>
+            <p class="cartao-frente-numero" id="numero-cartao">0000 0000 0000 0000</p>
+            <p class="cartao-frente-nome" id="nome-cartao">Jane Appleseed</p>
+            <p class="cartao-frente-data" id="expiracao-cartao">00/00</p>
+          </div>
+        </div>
+
+        <div class="conteudo-resultado-cartao">
+          <div class="cartao-tras">
+            <p class="cartao-tras-cvc" id="cvc-cartao">000</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="conteudo-form">
+        <form id="form-cartao">
+
+          <legend></legend>
+
+          <div class="campo">
+            <label for="name">Cardholder Name</label>
+            <input type="text" name="name" placeholder="e.g. Jane Appleseed" id="name" maxlength="25" required oninput="javascript: this.value = this.value.toUpperCase()">
+          </div>
+
+          <div class="campo">
+            <label for="card-number">Card Number</label>
+            <input type="text" name="card-number" placeholder="e.g. 1234 5678 9123 0000" id="card-number" minlength="19"
+              maxlength="20" required>
+          </div>
+
+
+          <fieldset>
+            <div class="campo">
+              <label for="date-month">Exp. Date (MM/YY)</label>
+              <input type="number" name="date-month" placeholder="MM" id="date-month" min="1" max="12"
+                required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                type = "number"
+                maxlength = "2">
+              <input type="number" name="date-year" placeholder="YY" id="date-year" min="0" max="99" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              type = "number"
+              maxlength = "2">
+            </div>
+
+            <div class="campo">
+              <label for="cvc-number">CVC</label>
+              <input type="number" name="cvc-number" placeholder="e.g. 123" id="cvc-number" min="1" max="999"
+                required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                type = "number"
+                maxlength = "3" onchange="leadingZeros(this)"
+                onkeyup="leadingZeros(this)"
+                onclick="leadingZeros(this)">
+
+            </div>
+          </fieldset>
+          <button type="submit">Confirm</button>
+        </form>
+        <div class="conteudo-agradecimento" id="popup-agradecimento">
+          <img src="/images/icon-complete.svg" alt="icone agradecimento">
+          <p>Thank you!</p>
+          <p>We've added your card details</p>
+          <button id="agradecimento-continue-btn">Continue</button>
+        </div>
+      </div>
+      <!-- Completed state start -->
+
+      
+
+  </main>
+
+  <footer class="footer">
+
+    <div class="attribution">
+
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded
+        by <a href="https://github.com/adryancsmendes">@adryancsmendes</a>.</p>
+
+    </div>
+
+  </footer>
+  <!-- Scripts da Aplicação -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+  <script src="/js/main.js"></script>
+  
+</body>
+
+</html>

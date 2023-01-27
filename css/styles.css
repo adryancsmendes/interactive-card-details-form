@@ -158,6 +158,13 @@
     width: 100%;
   }
 }
+* body .conteudo-form .titulo {
+  color: #21092f;
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: right;
+}
 * body .conteudo-form form {
   max-width: 350px;
   margin: 0 auto;
@@ -216,18 +223,19 @@
 * body .conteudo-form form button {
   width: 100%;
   padding: 0.75rem 0;
-  background: #8e8593;
+  background: #21092f;
   color: #fff;
   border: none;
   border-radius: 5px;
   transition: 0.4s;
   max-width: 310px;
   margin: 1rem auto 0;
+  transform: scale(0.95);
 }
 * body .conteudo-form form button:hover {
   cursor: pointer;
   transition: 0.4s;
-  background: #21092f;
+  transform: scale(1);
 }
 * body .conteudo-form .conteudo-agradecimento {
   display: none;
@@ -238,7 +246,7 @@
   width: 100%;
   top: 100px;
   max-width: 318px;
-  padding-bottom: 4rem;
+  padding-bottom: 4.5rem;
 }
 * body .conteudo-form .conteudo-agradecimento img {
   max-width: 80px;
@@ -256,17 +264,18 @@
   margin: 0 0 4rem;
 }
 * body .conteudo-form .conteudo-agradecimento button {
-  background: #8e8593;
+  background: #21092f;
   border: none;
   color: #dedddf;
   width: 100%;
   padding: 1rem 0;
   border-radius: 8px;
   font-size: 1.1rem;
+  transform: scale(0.95);
 }
 * body .conteudo-form .conteudo-agradecimento button:hover {
   cursor: pointer;
-  background: #21092f;
+  transform: scale(1);
   transition: 0.4s;
 }
 * body .footer {
